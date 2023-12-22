@@ -51,7 +51,7 @@ body {
   padding-bottom: 1rem;
 }
 
-#title-name {
+.title-name {
   font-family: "BlueBerry";
   font-size: 3.25rem;
   font-weight: 400;
@@ -61,12 +61,12 @@ body {
   letter-spacing: 0.3rem;
 }
 
-#title-place {
+.title-place {
   font-size: 2.8rem;
   color: #637072;
 }
 
-#title-message {
+.title-message {
   font-size: 1.5rem;
   color: #b83c3c;
 }
