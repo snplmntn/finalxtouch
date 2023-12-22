@@ -1,5 +1,2 @@
-👋 Hi, DO IT, JUST DO IT
-👀 TAPOS MO NA BA ASSIGNMENT
-🌱 OKE NICE
-😟 OH NO HINDI PA?
-🚒 GAWIN MO NA!
+VIEW IT HERE: HAXOR🔛🔝
+[[https://snplmntn.github.io/finalxtouch-client/](https://snplmntn.github.io/finalxtouch-client/)https://snplmntn.github.io/finalxtouch-client/](https://snplmntn.github.io/finalxtouch-client/)https://snplmntn.github.io/finalxtouch-client/
