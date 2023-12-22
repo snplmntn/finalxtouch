@@ -1,0 +1,110 @@
+:root {
+  --color-main: #db8770;
+}
+
+@font-face {
+  font-family: "Bobby Jones";
+  src: url("./assets/fonts/bobby-jones-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bobby Jones Condensed";
+  src: url("./assets/fonts/bobby-jones-condensed.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bobby Jones Soft";
+  src: url("./assets/fonts/bobby-jones-soft-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "BlueBerry";
+  src: url("./assets/fonts/Blueberry\ .ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Bobby Jones Condensed", sans-serif;
+  font-weight: 300;
+  color: #444;
+}
+
+/* GENERAL ELEMENTS */
+.section {
+  padding: 15rem 3rem;
+  border-top: 1px solid #ddd;
+  transition: transform 1s, opacity 1s;
+}
+
+/* TITLE */
+.title {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+#title-name {
+  font-family: "BlueBerry";
+  font-size: 3.25rem;
+  font-weight: 400;
+  color: var(--color-main);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  letter-spacing: 0.3rem;
+}
+
+#title-place {
+  font-size: 2.8rem;
+  color: #637072;
+}
+
+#title-message {
+  font-size: 1.5rem;
+  color: #b83c3c;
+}
+
+/* NAV */
+.nav {
+  background-color: var(--color-main);
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-buttons {
+  font-size: 2rem;
+}
+
+.nav-button {
+  cursor: pointer;
+  color: #000;
+  margin: 0 2rem;
+}
+
+.nav-search {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: url("./assets/img/search-interface-symbol.png");
+  background-size: cover;
+}
+
+.nav-account {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: url("./assets/img/profile-user.png");
+  background-size: cover;
+}
