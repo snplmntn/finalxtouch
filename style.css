@@ -140,22 +140,3 @@
   }
 
   /* slider */
-
-  /* voucher */
-
-  .voucher {
-    height: 60vh;
-    background-color: #efefef;
-    background-image: url(./assets/img/background-voucher.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .voucher-image {
-    height: 90%;
-    flex-shrink: 1;
-  }
