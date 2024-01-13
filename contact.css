@@ -1,0 +1,482 @@
+:root {
+  --color-main: #db8770;
+}
+
+@font-face {
+  font-family: "Bobby Jones";
+  src: url("./assets/fonts/bobby-jones-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bobby Jones Condensed";
+  src: url("./assets/fonts/bobby-jones-condensed.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bobby Jones Soft";
+  src: url("./assets/fonts/bobby-jones-soft-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "BlueBerry";
+  src: url("./assets/fonts/Blueberry\ .ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alice";
+  src: url("./assets/fonts/Alice-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Bobby Jones Condensed", sans-serif;
+  font-weight: 300;
+  color: #444;
+  background-color: #FFF1EE;
+}
+
+/* GENERAL ELEMENTS */
+.section {
+  padding: 0 3rem;
+  border-top: 1px solid #ddd;
+  transition: transform 1s, opacity 1s;
+}
+
+/* TITLE */
+.title {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.title-name {
+  font-family: "BlueBerry";
+  font-size: 3.25rem;
+  font-weight: 400;
+  color: var(--color-main);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  letter-spacing: 0.3rem;
+}
+
+.title-place {
+  font-size: 2.8rem;
+  color: #637072;
+}
+
+.title-message {
+  font-size: 1.5rem;
+  color: #b83c3c;
+}
+
+  /* NAV */
+  .nav-section {
+    background-color: var(--color-main);
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .nav-buttons {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+  }
+  
+  .nav-button {
+    cursor: pointer;
+    color: #000;
+    margin: 0 2rem;
+  }
+
+  .nav-left {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-search {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: url("./assets/img/search-interface-symbol.png");
+    background-size: cover;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .nav-right > * {
+    margin-left: 2rem;
+  }
+
+  .nav-cart {
+    cursor: pointer;
+    height: 2.4rem;
+    width: 2.4rem;
+    background: url("./assets/img/shopping-bag.png");
+    background-size: cover;
+  }
+  
+  .nav-account {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: url("./assets/img/profile-user.png");
+    background-size: cover;
+  }
+
+  /* get in touch */
+  .business-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .info{
+    margin-left: auto;
+    z-index: 1;
+    position: relative;
+  }
+
+  .get-in-touch {
+    font-family: "Blueberry";
+    color: black;
+    font-size: 4rem;
+  }
+
+  .get-in-touch-details {
+    font-family: "Alice";
+    color: black;
+    font-size: 2rem;
+  }
+
+  .business-hours {
+    font-size: 2.5rem;
+    color: black;
+  }
+
+  .google-map {
+    margin-left: auto;
+    z-index: 1;
+    position: relative;
+  }
+
+  .background-gif {
+    background-image: url('./assets//img/Contact\ Page\ GIF.gif');
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  /* contact  */
+  .contact {
+    background-color: var(--color-main);
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    padding: 3rem;
+    border-bottom: 4px solid #000;
+  }
+  
+  .contact-information {
+    background-color: #FFF1EE;
+    border: 3px solid #B83C3C;
+    height: 22.5rem;
+    width: 25rem;
+  }
+
+  
+  .contact-information-text {
+    color: black;
+    font-size: 1.75rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-item {
+    color: black;
+    font-size: 1.5rem;
+    font-family: "Alice";
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .contact-detail {
+    text-align: center;
+    font-family: "Arial";
+    padding-bottom: 1.25rem;
+  }
+
+  .social-media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-media {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .facebook-logo,
+  .instagram-logo {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    background-size: cover;
+    background-position: center; 
+    margin: 0 5px; 
+  }
+
+  .facebook-logo {
+    background-image: url('./assets/img/facebook-app-symbol.png');
+  }
+
+  .instagram-logo {
+    background-image: url('./assets/img/instagram.png');
+  }
+
+  /* message us */
+  
+  .message-us {
+
+    background-color: #FFF1EE;
+    border: 3px solid #B83C3C;
+    height: 30rem;
+    width: 40rem;
+  }
+
+  /* .form-logo {
+    background-image: url('./assets/img/logo-2.png');
+    height: 10rem;
+    width: 10rem;
+  } */
+  
+  .name-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .input-name {
+    color: black;
+    font-family: "Alice";
+    font-size: 1.1rem;
+    margin-left: 2rem;
+  }
+
+  .name-input {
+    height: 1.75rem;
+    background-color: transparent;
+    border: 3px solid #B83C3C;
+    margin-left: 2rem;
+    margin-bottom: .5rem;
+  }
+
+  .input-large {
+    width: 23.5rem;
+  }
+
+  .input-largest {
+    height: 6rem;
+    width: 35.5rem;
+    background-color: transparent;
+    border: 3px solid #B83C3C;
+    margin-left: 2rem;
+    margin-bottom: .5rem;
+    resize: none;
+  }
+  
+  #subject-input {
+    background-color: transparent;
+    border: 3px solid #B83C3C;
+    margin-left: 2rem;
+    margin-bottom: .5rem;
+    width: 23.5rem;
+    height: 1.85rem;
+  }
+
+  .submit-btn {
+    font-family: "Bobby Jones Condensed";
+    font-size: 1.25rem;
+    background-color: #B83C3C;
+    border: none;
+    border-radius: .75rem;
+    height: 2.5rem;
+    width: 6.5rem;
+    margin-left: 31rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: .3rem solid var(--color-main);;
+  }
+
+  /* faq */
+  .faq-container {
+    border-bottom: 4px solid #000;
+  }
+
+  .platter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .platter-img {
+    display: inline-block;
+    height: 26rem;
+    width: 60rem;
+    background-size: cover;
+    background-position: center; 
+    background-image: url('./assets/img/platter.png');
+  }
+
+  .faq {
+    font-family: "Blueberry";
+    color: black;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .qaa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; 
+}
+
+  .question {
+    font-size: 2rem;
+    color: black;
+    margin-left: 4rem;
+  }
+
+  .answer {
+    margin-left: 4rem;
+    font-size: 1.2rem;
+    letter-spacing:1.5px;
+    color: black;
+    font-family: "Arial";
+    margin-bottom: 1rem;
+  }
+
+  /* footer */
+
+  footer {
+    height: 40vh;
+    max-height: 40vh;
+    min-height: 40vh;
+  }
+
+  footer > * {
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+  .footer-content-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .first-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    font-family: "Bobby Jones Condensed";
+  }
+
+  .sugarxsalt-logo {
+    height: 15rem;
+    width: auto;
+  }
+
+  .socials-logo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .socials-logo {
+    height: 2rem;
+    width: auto;
+    margin: 0.5rem;
+  }
+
+  .second-column {
+    display: flex;
+    flex: 1;
+    font-size: 1rem;
+    font-family: "Alice";
+    font-size: 1.5rem;
+  }
+
+  .third-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+  }
+
+  .anchor-links {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Bobby Jones";
+  }
+
+  .anchor-links-left, .anchor-links-center, .anchor-links-right {
+    width: auto;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }  
+
+  .anchor-links-left a:nth-child(1), .anchor-links-center a:nth-child(1), .anchor-links-right a:nth-child(1) {
+    margin-bottom: 1.5rem;
+  }
+  
+  .anchor-links a {
+    text-decoration: none;
+    color: rgb(67,63,58);
+    font-size: 1rem;
+  }
+
+  .haxor-logo {
+    width: 10rem;
+    height: auto;
+    margin-top: 1rem;
+  }
