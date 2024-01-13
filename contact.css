@@ -177,9 +177,11 @@ body {
   }
 
   .google-map {
+    margin: 10px 0;
     margin-left: auto;
     z-index: 1;
     position: relative;
+    border: 2px solid #000;
   }
 
   .background-gif {
