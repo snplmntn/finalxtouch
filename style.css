@@ -1,0 +1,465 @@
+:root {
+    --color-main: #db8770;
+  }
+  
+  @font-face {
+    font-family: "Bobby Jones";
+    src: url("./assets/fonts/bobby-jones-regular.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Bobby Jones Condensed";
+    src: url("./assets/fonts/bobby-jones-condensed.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Bobby Jones Soft";
+    src: url("./assets/fonts/bobby-jones-soft-regular.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "BlueBerry";
+    src: url("./assets/fonts/Blueberry\ .ttf") format("truetype");
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Bobby Jones Condensed", sans-serif;
+    font-weight: 300;
+    color: #444;
+  }
+  
+  /* GENERAL ELEMENTS */
+  .section {
+    padding: 15rem 3rem;
+    border-top: 1px solid #ddd;
+    transition: transform 1s, opacity 1s;
+  }
+  
+  /* TITLE */
+  .title {
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .title-name {
+    font-family: "BlueBerry";
+    font-size: 3.25rem;
+    font-weight: 400;
+    color: var(--color-main);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    letter-spacing: 0.3rem;
+  }
+  
+  .title-place {
+    font-size: 2.8rem;
+    color: #637072;
+  }
+  
+  .title-message {
+    font-size: 1.5rem;
+    color: #b83c3c;
+  }
+  
+  /* NAV */
+  .nav-section {
+    background-color: var(--color-main);
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .nav-buttons {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+  }
+  
+  .nav-button {
+    cursor: pointer;
+    color: #000;
+    margin: 0 2rem;
+  }
+
+  .nav-left {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-search {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: url("./assets/img/search-interface-symbol.png");
+    background-size: cover;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .nav-right > * {
+    margin-left: 2rem;
+  }
+
+  .nav-cart {
+    cursor: pointer;
+    height: 2.4rem;
+    width: 2.4rem;
+    background: url("./assets/img/shopping-bag.png");
+    background-size: cover;
+  }
+  
+  .nav-account {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: url("./assets/img/profile-user.png");
+    background-size: cover;
+  }
+
+  /* slider start */
+
+  .slideshow {
+    width: auto;
+    height: auto;
+  }
+
+  .slider {
+    overflow: hidden;
+  }
+
+  .slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+  }
+
+  .slides input {
+    display: none;
+  }
+
+  .slide {
+    width: 20%;
+    transition: 2s;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* manual slide navigation */
+
+  .navigation-manual {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manual-btn {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .manual-btn:hover {
+    background: rgb(255, 219, 206);
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+
+  #radio2:checked ~ .first {
+    margin-left: -20%;
+  }
+
+  #radio3:checked ~ .first {
+    margin-left: -40%;
+  }
+
+  /* slider end */
+  /* voucher */
+
+  .voucher {
+    height: 60vh;
+    background-color: rgb(255,240,240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  }
+
+  .voucher-image {
+    height: 90%;
+    flex-shrink: 1;
+  }
+
+  /* top items */
+
+  .top-items {
+    height: 90vh;
+    background-color: rgb(255,224,224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  .top-items-header {
+    font-family: BlueBerry;
+    font-size: 3rem;
+  }
+
+  .product-showcase-container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-showcase-container > div {
+    width: 22rem;
+    height: 25rem;
+    background-color: rgb(218,134,112);
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+  }
+
+  /* carrot cupcake */
+
+  .product-1 {
+    height: 23rem;
+    width: auto;
+    position: relative;
+    top: -10rem;
+  }
+
+  .product-1-contents-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    top: -13rem;
+  }
+
+  .product-1-description {
+    text-align: center;
+  }
+
+  .product-1-button {
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    width: 10rem;
+    height: 3rem;
+    border: 1.5px solid white;
+    border-radius: 5%;
+    background-color: rgb(184,60,60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* crinkles */
+
+  .product-2 {
+    height: 23rem;
+    width: auto;
+    position: relative;
+    top: -10rem;
+  }
+
+  .product-2-contents-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    top: -13rem;
+  }
+
+  .product-2-button {
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    width: 10rem;
+    height: 3rem;
+    border: 1.5px solid white;
+    border-radius: 5%;
+    background-color: rgb(184,60,60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* blueberry muffin */
+
+  .product-3 {
+    height: 23rem;
+    width: auto;
+    position: relative;
+    top: -10rem;
+  }
+
+  .product-3-contents-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    top: -13rem;
+  }
+
+  .product-3-button {
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    width: 10rem;
+    height: 3rem;
+    border: 1.5px solid white;
+    border-radius: 5%;
+    background-color: rgb(184,60,60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-name {
+    font-family: BlueBerry;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+
+  /* footer */
+
+  footer {
+    height: 40vh;
+    max-height: 40vh;
+    min-height: 40vh;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  footer > * {
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+  .footer-content-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .first-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .sugarxsalt-logo {
+    height: 10rem;
+    width: auto;
+  }
+
+  .socials-logo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .socials-logo {
+    height: 2rem;
+    width: auto;
+    margin: 0.5rem;
+  }
+
+  .second-column {
+    display: flex;
+    text-align: center;
+    flex: 1;
+    font-size: 1rem;
+  }
+
+  .third-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+  }
+
+  .anchor-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .anchor-links-left, .anchor-links-center, .anchor-links-right {
+    width: auto;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }  
+
+  .anchor-links-left a:nth-child(1), .anchor-links-center a:nth-child(1), .anchor-links-right a:nth-child(1) {
+    margin-bottom: 1.5rem;
+  }
+  
+  .anchor-links a {
+    text-decoration: none;
+    color: rgb(67,63,58);
+    font-size: 1rem;
+  }
+
+  .haxor-logo {
+    width: 10rem;
+    height: auto;
+    margin-top: 1rem;
+  }
