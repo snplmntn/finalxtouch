@@ -106,11 +106,11 @@
     align-items: center;
   }
   
-  .nav-search {
+  .nav-logout {
     cursor: pointer;
     height: 2.5rem;
     width: 2.5rem;
-    background: url("./assets/img/search-interface-symbol.png");
+    background: url("./assets/img/logout-button.png");
     background-size: cover;
   }
 
@@ -231,7 +231,7 @@
   /* top items */
 
   .top-items {
-    height: 90vh;
+    height: 100vh;
     background-color: rgb(255,224,224);
     display: flex;
     justify-content: center;
@@ -370,6 +370,71 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
 
+  .feedback {
+    height: 80vh;
+    background-color: rgb(255,240,240);
+    box-shadow: inset 0 -8px 6px -6px rgba(0, 0, 0, 0.5);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .feedback-showcase-container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .feedback-showcase-container > div {
+    width: 25rem;
+    height: 20rem;
+    background-color: rgb(219,135,112);
+    clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+  }
+
+  .feedback-text {
+    font-family: "Bobby Jones Soft";
+    font-size: 1.5rem;
+  }
+
+  .feedback-text > span:nth-child(1) {
+    color: rgb(219,135,112);
+  }
+
+  .feedback-text > span:nth-child(2) {
+    color: rgb(125,136,139)
+  }
+
+  .feedback-showcase-container > div {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .feedback-review {
+    text-align: center;
+    font-size: 1.5rem;
+    color:#000;
+  }
+
+  .feedback-name {
+    color: white;
+    font-size: 1.4rem;
+    position: relative;
+  }
+
+  .review-button {
+    font-size: 2rem;
+    text-decoration: underline rgb(152,23,3);
+    cursor: pointer;
+  }
 
   /* footer */
 
