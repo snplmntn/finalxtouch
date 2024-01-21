@@ -92,6 +92,8 @@ function signup() {
     return;
   }
 
+  signUp_button.disabled = true;
+  signUp_button.innerText = "Signing you up..."
   createUserWithEmailAndPassword(auth, email, password)
     .then(function (userCredential) {
     const user = auth.currentUser;
@@ -121,15 +123,19 @@ function signup() {
             
         })
       } catch(err) {
+        signUp_button.disabled = false;
+        signUp_button.innerText = "SIGN UP!"
         console.error(err)
-        alert("An Error Occured. Please try it again in a few minutes. If problem still occurs contact the developer.")
+        return alert("An Error Occured. Please try it again in a few minutes. If problem still occurs contact the developer.")
       }
     })
     .catch(function (error) {
+      signUp_button.disabled = false;
+      signUp_button.innerText = "SIGN UP!"
       // Sign up failed
       const errorMessage = error.message;
       console.error("Error signing up:", errorMessage);
-      alert(errorMessage);
+      return alert(errorMessage);
     //   document.getElementById("signup-correct").innerHTML = "";
     });
 }

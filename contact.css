@@ -110,11 +110,11 @@ body {
     align-items: center;
   }
   
-  .nav-search {
+  .nav-logout {
     cursor: pointer;
     height: 2.5rem;
     width: 2.5rem;
-    background: url("./assets/img/search-interface-symbol.png");
+    background: url("./assets/img/logout-button.png");
     background-size: cover;
   }
 

@@ -20,7 +20,7 @@ import {
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 let load = false;
-
+let haveUser;
 //Checks User's Auth
 function checkAuthState() {
     auth.onAuthStateChanged(function (user) {
@@ -28,6 +28,7 @@ function checkAuthState() {
         if (!user) {
           window.location.href = "login.html";
         }
+        haveUser = user;
         load = false;
       }
     });
@@ -69,3 +70,28 @@ logout_button.addEventListener("click", function () {
         // An error happened.
       });
   });
+
+const buyNow1 = document.querySelector(".product-1-button")
+const buyNow2 = document.querySelector(".product-2-button")
+const buyNow3 = document.querySelector(".product-3-button")
+
+buyNow1.addEventListener("click", function () {
+  if(!haveUser) {
+    alert("You need to sign in first.")
+    window.location.href = "login.html";
+  }
+});
+
+buyNow2.addEventListener("click", function () {
+  if(!haveUser) {
+    alert("You need to sign in first.")
+    window.location.href = "login.html";
+  }
+});
+
+buyNow3.addEventListener("click", function () {
+  if(!haveUser) {
+    alert("You need to sign in first.")
+    window.location.href = "login.html";
+  }
+});

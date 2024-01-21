@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sugar X Salt MNL</title>
     <link rel="stylesheet" href="style.css" />
-  <script type="module" src="index.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -16,12 +16,12 @@
       </section>
       <nav class="nav-section">
         <section class="nav-left">
-            <p class="nav-search signOutBtn"></p>
+            <p class="nav-logout signOutBtn"></p>
         </section>
         <section class="nav-buttons">
-          <a href="index.html" class="nav-button">HOME</a>
+          <span class="nav-button">HOME</span>
           <span class="nav-button">MENU</span>
-          <span class="nav-button">ABOUT</span>
+          <a href="about-us.html" class="nav-button">ABOUT</span>
           <a href="contact.html" class="nav-button">CONTACT</a>
         </section>
         <section class="nav-right">
@@ -76,7 +76,7 @@
                   <div class="product-1-contents-text">
                     <h1 class="product-name 1">Carrot Cupcake</h1>
                     <p class="product-1-description">Sweet, spiced, and irresistibly crumbly.</p>
-                    <a href="." class="product-1-button">Buy Now</a>
+                    <a class="product-1-button">Buy Now</a>
                   </div>
                 </div>
               </div>
@@ -88,7 +88,7 @@
                     <h1 class="product-name 2">Crinkles</h1>
                     <p class="product-2-description">Fudge, crackle, melt-repeat. Your new obsession.
                     </p>
-                    <a href="." class="product-2-button">Buy Now</a>
+                    <a class="product-2-button">Buy Now</a>
                   </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@
                   <div class="product-3-contents-text">
                     <h1 class="product-name 3">Blueberry Muffin</h1>
                     <p class="product-3-description">Luscious berries meet tangy swirl, bliss with every crumb.</p>
-                    <a href="." class="product-3-button">Buy Now</a>
+                    <a class="product-3-button">Buy Now</a>
                   </div>
                 </div>
               </div>
@@ -107,8 +107,28 @@
         </section>
 
         <section class="feedback">
-
+          <div class="feedback-text">
+            Check out <span>SUGAR X SALT </span><span>MANILA'S</span> glowing reviews and find<br>out for yourself the deliciousness and quality we offer.
+          </div>
+          <div class="feedback-showcase-container">
+            <div class="feedback-1">
+              <p class="feedback-review">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse neque odit, obcaecati eum veniam! Sed, labore. Id nobis unde minima tenetur adipisci, magni quis esse voluptates deleniti sequi temporibus."</p>
+              <span class="feedback-name">Marc Lowel Castillo</span>
+            </div>
+            <div class="feedback-2">
+              <p class="feedback-review">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique in voluptatum corrupti ut, rerum accusantium distinctio reprehenderit error optio, neque eos beatae reiciendis deleniti ea veritatis odit at. Fugit, nostrum?"</p>
+              <span class="feedback-name">John Joseph Cruz</span>
+            </div>
+            <div class="feedback-3">
+              <p class="feedback-review">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque numquam qui dolor pariatur quisquam totam harum iste rem, sapiente quae obcaecati mollitia blanditiis illo cum aperiam quis libero!"</p>
+              <span class="feedback-name">Lyxander Iskra Datu</span>
+            </div>
+          </div>
+          <div class="leave-a-review-container">
+            <span class="review-button">LEAVE A REVIEW</span>
+          </div>
         </section>
+
     </main>
 
     <footer>
@@ -116,8 +136,8 @@
         <div class="first-column">
           <img class="sugarxsalt-logo" src="./assets/img/logo-2.png" alt="">
           <div class="socials-logo-container">
-            <a href="."><img class="socials-logo" src="./assets/img/facebook.png" alt=""></a>
-            <a href="."><img class="socials-logo" src="./assets/img/instagram.png" alt=""></a>
+            <a href="https://www.facebook.com/sugarxsalt.mnl" target="_blank"><img class="socials-logo" src="./assets/img/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/sugarxsalt.mnl/"><img class="socials-logo" src="./assets/img/instagram.png" alt=""></a>
             <a href="."><img class="socials-logo" src="./assets/img/twitter.png" alt=""></a>
           </div>
         </div>
@@ -143,6 +163,6 @@
         </div>
       </div>
     </footer>
-    
+    <script type="module" src="index.js"></script>
   </body>
 </html>
