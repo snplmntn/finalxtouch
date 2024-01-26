@@ -24,26 +24,24 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
   
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
+  html, body {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: "Bobby Jones Condensed", sans-serif;
     font-weight: 300;
     color: #444;
   }
-  
-  /* GENERAL ELEMENTS */
-  .section {
-    padding: 15rem 3rem;
-    border-top: 1px solid #ddd;
-    transition: transform 1s, opacity 1s;
-  }
-  
-  /* TITLE */
+
   .title {
     background-color: #efefef;
     display: flex;
@@ -72,463 +70,313 @@
     font-size: 1.5rem;
     color: #b83c3c;
   }
-  
-  /* NAV */
-  .nav-section {
-    background-color: var(--color-main);
+
+  /* sticky nav bar */
+
+  .sticky-nav-bar {
+    height: 5rem;
+    background-color:var(--color-main);
     border-top: 4px solid #000;
     border-bottom: 4px solid #000;
-    padding: 20px;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0px;
   }
-  
-  .nav-buttons {
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    flex: 2;
-  }
-  
-  .nav-button {
-    cursor: pointer;
-    color: #000;
-    margin: 0 2rem;
+
+  .sticky-nav-bar > div > a {
     text-decoration: none;
   }
 
-  .nav-left {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .nav-logout {
-    cursor: pointer;
+  .logout-button {
     height: 2.5rem;
-    width: 2.5rem;
-    background: url("./assets/img/logout-button.png");
-    background-size: cover;
+    cursor: pointer;
   }
 
-  .nav-right {
+  .nav-buttons {
+    font-size: 1.5rem;
+    color: black;
+  }
+
+  main {
+    background-color: rgb(254,241,240);
+  }
+
+  .section-title {
     display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(254,254,255);
+  }
+
+  .section-title-text {
+    color: black;
+    font-family: 'Bobby Jones Soft';
+  }
+
+  /* dashboard page */
+
+  .dashboard-page {
+    height: 105vh;
+  }
+
+  /* dashboard stats */
+
+  .dashboard-total-stats {
+    background-color: rgb(254,240,241);
+    height: 15rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     flex-direction: row;
-    justify-content: center;
+    font-family: 'Bobby Jones Soft';
+  }
+
+  .dashboard-total-stats > div {
+    height: 10rem;
+    width: 17rem;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    flex: 1;
   }
 
-  .nav-right > * {
-    margin-left: 2rem;
+  .total-customers, 
+  .total-orders {
+    background-color: var(--color-main);
   }
 
-  .nav-cart {
-    cursor: pointer;
-    height: 2.4rem;
-    width: 2.4rem;
-    background: url("./assets/img/shopping-bag.png");
-    background-size: cover;
+  .total-daily-income, 
+  .total-income {
+    background-color: rgb(184,61,61);
   }
   
-  .nav-account {
-    cursor: pointer;
-    height: 2.5rem;
-    width: 2.5rem;
-    background: url("./assets/img/profile-user.png");
-    background-size: cover;
+  .dashboard-amount-1st {
+    color: black;
+    font-size: 4rem;
   }
 
-  /* slider start */
-
-  .slideshow {
-    width: auto;
-    height: auto;
+  .dashboard-amount-2nd {
+    color: white;
+    font-size: 2.9rem;
   }
 
-  .slider {
-    overflow: hidden;
+  .dashboard-text-1st {
+    color: white;
+    font-size: 1.2rem;
   }
 
-  .slides {
-    width: 500%;
-    height: 100%;
+  .dashboard-text-2nd {
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 1.2rem;
+  }
+
+  .dashboard-icons {
+    height: 5rem;
+  }
+
+  /* dashboard items */
+
+  .dashboard-items {
     display: flex;
-  }
-
-  .slides input {
-    display: none;
-  }
-
-  .slide {
-    width: 20%;
-    transition: 2s;
-  }
-
-  .slide img {
-    width: 100%;
-    height: 100%;
-  }
-
-  /* manual slide navigation */
-
-  .navigation-manual {
-    position: absolute;
-    width: 100%;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .manual-btn {
-    border: 2px solid rgb(255, 255, 255);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-  }
-
-  .manual-btn:not(:last-child) {
-    margin-right: 40px;
-  }
-
-  .manual-btn:hover {
-    background: rgb(255, 219, 206);
-  }
-
-  #radio1:checked ~ .first {
-    margin-left: 0;
-  }
-
-  #radio2:checked ~ .first {
-    margin-left: -20%;
-  }
-
-  #radio3:checked ~ .first {
-    margin-left: -40%;
-  }
-
-  /* slider end */
-  /* voucher */
-
-  .voucher {
-    height: 60vh;
-    background-color: rgb(255,240,240);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 8px 6px -6px rgba(0, 0, 0, 0.5);
-  }
-
-  .voucher-image {
-    height: 90%;
-    flex-shrink: 1;
-  }
-
-  /* top items */
-
-  .top-items {
-    height: 100vh;
-    background-color: rgb(255,224,224);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 10rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    background-color: rgb(254,254,255);
   }
 
-  .top-items-header {
-    font-family: BlueBerry;
-    font-size: 3rem;
+  .dashboard-items-container {
+    width: 100%;
+    padding-right: 2rem;
   }
 
-  .product-showcase-container {
-    width: 80%;
-    height: auto;
+  .dashboard-items-title {
+    color: black;
+    font-size: 2rem;
+    font-family: 'BlueBerry';
+    text-align: end;
+  }
+
+  .dashboard-product-container {
     display: flex;
     justify-content: space-between;
-  }
-
-  .product-showcase-container > div {
-    width: 22rem;
-    height: 25rem;
-    background-color: rgb(218,134,112);
-    border-top-left-radius: 10rem;
-    border-top-right-radius: 10rem;
-  }
-
-  /* carrot cupcake */
-
-  .product-1 {
-    height: 23rem;
-    width: auto;
-    position: relative;
-    top: -10rem;
-  }
-
-  .product-1-contents-text {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .dashboard-product-1, 
+  .dashboard-product-2, 
+  .dashboard-product-3, 
+  .dashboard-product-4 {
+    display: flex;
     flex-direction: column;
-    gap: 2rem;
-    position: relative;
-    top: -13rem;
+    gap: 1rem;
   }
 
-  .product-1-description {
-    text-align: center;
-  }
-
-  .product-1-button {
-    text-decoration: none;
-    font-size: 2rem;
-    color: white;
-    width: 10rem;
-    height: 3rem;
-    border: 1.5px solid white;
-    border-radius: 5%;
-    background-color: rgb(184,60,60);
+  .dashboard-products-img-container {
+    height: 15rem;
+    width: 15rem;
+    background-color: #db8770;
+    border-radius: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
   }
 
-  /* crinkles */
-
-  .product-2 {
-    height: 23rem;
-    width: auto;
-    position: relative;
-    top: -10rem;
+  .dashboard-products-img {
+    height: 90%;
   }
 
-  .product-2-contents-text {
+  .dashboard-product-info-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 2rem;
-    position: relative;
-    top: -13rem;
-  }
-
-  .product-2-button {
-    text-decoration: none;
-    font-size: 2rem;
-    color: white;
-    width: 10rem;
-    height: 3rem;
-    border: 1.5px solid white;
-    border-radius: 5%;
-    background-color: rgb(184,60,60);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-
-  /* blueberry muffin */
-
-  .product-3 {
-    height: 23rem;
-    width: auto;
-    position: relative;
-    top: -10rem;
-  }
-
-  .product-3-contents-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    position: relative;
-    top: -13rem;
-  }
-
-  .product-3-button {
-    text-decoration: none;
-    font-size: 2rem;
-    color: white;
-    width: 10rem;
-    height: 3rem;
-    border: 1.5px solid white;
-    border-radius: 5%;
-    background-color: rgb(184,60,60);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
   }
 
   .product-name {
-    font-family: BlueBerry;
-    color: white;
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-
-  .feedback {
-    height: 80vh;
-    background-color: rgb(255,240,240);
-    box-shadow: inset 0 -8px 6px -6px rgba(0, 0, 0, 0.5);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .feedback-showcase-container {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .feedback-showcase-container > div {
-    width: 25rem;
-    height: 20rem;
-    background-color: rgb(219,135,112);
-    clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
-  }
-
-  .feedback-text {
-    font-family: "Bobby Jones Soft";
+    font-family: 'BlueBerry';
     font-size: 1.5rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
-  .feedback-text > span:nth-child(1) {
-    color: rgb(219,135,112);
+  .product-sold, 
+  .number-of-stocks {
+    font-size: 1.3rem;
   }
 
-  .feedback-text > span:nth-child(2) {
-    color: rgb(125,136,139)
+  .product-sold > span, 
+  .number-of-stocks > span {
+    font-weight: 1000;
+    color:#b83c3c
   }
 
-  .feedback-showcase-container > div {
-    padding: 1rem;
+  /* orders page */
+
+  .orders-page {
+    height: 120vh;
+  }
+
+  .orders-total-stats {
+    background-color: rgb(254,240,241);
+    height: 15rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 1rem;
-    position: relative;
+    flex-direction: row;
+    font-family: 'Bobby Jones Soft';
   }
 
-  .feedback-review {
-    text-align: center;
-    font-size: 1.5rem;
-    color:#000;
-  }
-
-  .feedback-name {
-    color: white;
-    font-size: 1.4rem;
-    position: relative;
-  }
-
-  .review-button {
-    font-size: 2rem;
-    text-decoration: underline rgb(152,23,3);
-    cursor: pointer;
-  }
-
-  /* footer */
-
-  footer {
-    height: 40vh;
-    max-height: 40vh;
-    min-height: 40vh;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-
-  footer > * {
-    font-family: "Roboto", sans-serif;
-    font-weight: lighter;
-    font-style: normal;
-  }
-
-  .footer-content-container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .first-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-  }
-
-  .sugarxsalt-logo {
+  .orders-total-stats > div {
     height: 10rem;
-    width: auto;
-  }
-
-  .socials-logo-container {
+    width: 17rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-  }
-
-  .socials-logo {
-    height: 2rem;
-    width: auto;
-    margin: 0.5rem;
-  }
-
-  .second-column {
-    display: flex;
-    text-align: center;
-    flex: 1;
-    font-size: 1rem;
-  }
-
-  .third-column {
-    display: flex;
     flex-direction: column;
-    align-items: center;
+  }
+
+  .orders-total-stats > div:nth-child(2n + 1) {
+    background-color: var(--color-main);
+  }
+
+  .orders-total-stats > div:nth-child(2) {
+    background-color: rgb(184,61,61);
+  }
+
+  .orders-amount {
+    color: black;
+    font-size: 4rem;
+  }
+
+  .orders-text {
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  .orders-amount-2 {
+    color: white;
+    font-size: 4rem;
+  }
+
+  .orders-text-2 {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  /* orders table */
+
+  .orders-table-container {
+    overflow-y: scroll;
+    height: 37rem;
+    display: flex;
     justify-content: center;
-    flex: 2;
   }
 
-  .anchor-links {
-    display: flex;
-    justify-content: space-between;
+  .orders-table {
+    border-collapse: collapse;
+    margin: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    height: 50rem;
+    width: 100%;
   }
 
-  .anchor-links-left, .anchor-links-center, .anchor-links-right {
-    width: auto;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 2rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  }  
-
-  .anchor-links-left a:nth-child(1), .anchor-links-center a:nth-child(1), .anchor-links-right a:nth-child(1) {
-    margin-bottom: 1.5rem;
+  .orders-table-container::-webkit-scrollbar {
+    width: 0.4rem; /* Set the width of the scrollbar */
+    background-color: #f1f1f1; /* Set the background color of the scrollbar track */
   }
   
-  .anchor-links a {
-    text-decoration: none;
-    color: rgb(67,63,58);
-    font-size: 1rem;
+  .orders-table-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Set the background color of the scrollbar thumb */
+  }
+  
+  .orders-table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Set the background color of the scrollbar thumb on hover */
   }
 
-  .haxor-logo {
-    width: 10rem;
-    height: auto;
-    margin-top: 1rem;
+  .orders-table thead tr {
+    background-color: #db8770;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    
   }
+  
+  .orders-table th,
+  .orders-table td {
+    padding: 1rem 1rem;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .orders-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .orders-table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+  }
+
+  .orders-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  .orders-table tbody tr:last-of-type {
+    border-bottom: 2px solid #db8770;
+  }
+
+  /* inventory page */
+
+  .inventory-page {
+    height: 100vh;
+  }
+
+
+  

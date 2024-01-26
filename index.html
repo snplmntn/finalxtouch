@@ -1,168 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sugar X Salt MNL</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <header>
-      <section class="title">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <header class="title">
         <p class="title-name">SUGAR X SALT</p>
         <p class="title-place">MNL</p>
         <p class="title-message">SWEET TREATS FOR EVERY OCCASION.</p>
-      </section>
-      <nav class="nav-section">
-        <section class="nav-left">
-            <p class="nav-logout signOutBtn"></p>
-        </section>
-        <section class="nav-buttons">
-          <span class="nav-button">HOME</span>
-          <span class="nav-button">MENU</span>
-          <a href="about-us.html" class="nav-button">ABOUT</span>
-          <a href="contact.html" class="nav-button">CONTACT</a>
-        </section>
-        <section class="nav-right">
-            <p class="nav-cart"></p>
-            <p class="nav-account"></p>
-        </section>
-      </nav>
     </header>
 
+    <nav class="sticky-nav-bar">
+        <div class="logout">
+                <a href="."><img src="./assets/img/logout-button.png" class="logout-button" alt=""></a>
+        </div>
+        <div class="dashboard">
+                <a href="#section-1" class="nav-buttons">Dashboard</a>
+        </div>
+        <div class="orders">
+                <a href="#section-2" class="nav-buttons">Orders</a>
+        </div>
+        <div class="inventory">
+                <a href="." class="nav-buttons">Inventory</a>
+        </div>
+    </nav>
+    
+
     <main>
-        <section class="slideshow">
-          <div class="slider">
-            <div class="slides">
-              <!-- radio buttons start -->
-              <input type="radio" name="radio-btn" id="radio1">
-              <input type="radio" name="radio-btn" id="radio2">
-              <input type="radio" name="radio-btn" id="radio3">
-              <!-- radio buttons end -->
-              <!-- slide images start -->
-              <div class="slide first">
-                <a href="."><img src="./assets/img/1.png" alt="crinkles"></a>
-              </div>
-              <div class="slide">
-                <a href="."><img src="./assets/img/2.png" alt="carrot cupcake"></a>
-              </div>
-              <div class="slide">
-                <a href="."><img src="./assets/img/3.png" alt="blueberry muffin"></a>
-              </div>
-              <!-- slide images end -->
+        <section class="dashboard-page" id="section-1">
+            <div class="section-title">
+                <h1 class="section-title-text">Dashboard</h1>
             </div>
-            <!-- manual navigation start -->
-            <div class="navigation-manual">
-              <label for="radio1" class="manual-btn"></label>
-              <label for="radio2" class="manual-btn"></label>
-              <label for="radio3" class="manual-btn"></label>
-            </div>
-            <!-- manual navigation end -->
-          </div>
-        </section>
 
-        <section class="voucher">
-            <img src="./assets/img/voucher.png" alt="" class="voucher-image">
-        </section>
+            <!-- dashboard stats -->
 
-        <section class="top-items">
-            <h1 class="top-items-header">Our Top List</h1>
-            <div class="product-showcase-container">
-              <!-- carrot cupcake -->
-              <div class="product-showcase-1">
-                <div class="product-1-contents">
-                  <img src="./assets/img/product-1.png" class="product-1" alt="carrot cupcake">
-                  <div class="product-1-contents-text">
-                    <h1 class="product-name 1">Carrot Cupcake</h1>
-                    <p class="product-1-description">Sweet, spiced, and irresistibly crumbly.</p>
-                    <a class="product-1-button">Buy Now</a>
-                  </div>
+            <div class="dashboard-total-stats">
+                <div class="total-customers">
+                    <div class="customer-stats">
+                        <h1 class="dashboard-amount-1st">999</h1>
+                        <p class="dashboard-text-1st">Customers</p>
+                    </div>
+                    <img src="./assets/img/customer-icon.png" alt="" class="dashboard-icons">
                 </div>
-              </div>
-              <!-- crinkles -->
-              <div class="product-showcase-2">
-                <div class="product-2-contents">
-                  <img src="./assets/img/product-2.png" class="product-2" alt="crinkles">
-                  <div class="product-2-contents-text">
-                    <h1 class="product-name 2">Crinkles</h1>
-                    <p class="product-2-description">Fudge, crackle, melt-repeat. Your new obsession.
-                    </p>
-                    <a class="product-2-button">Buy Now</a>
-                  </div>
+                <div class="total-orders">
+                    <div class="order-stats">
+                        <h1 class="dashboard-amount-1st">999</h1>
+                        <p class="dashboard-text-1st">Orders</p>
+                    </div>
+                    <img src="./assets/img/order-icon.png" alt="" class="dashboard-icons">
                 </div>
-              </div>
-              <!-- blueberry muffin -->
-              <div class="product-showcase-3">
-                <div class="product-3-contents">
-                  <img src="./assets/img/product-3.png" class="product-3" alt="blueberry muffin">
-                  <div class="product-3-contents-text">
-                    <h1 class="product-name 3">Blueberry Muffin</h1>
-                    <p class="product-3-description">Luscious berries meet tangy swirl, bliss with every crumb.</p>
-                    <a class="product-3-button">Buy Now</a>
-                  </div>
+                <div class="total-daily-income">
+                    <div class="daily-icon-stats">
+                        <h1 class="dashboard-amount-2nd">PHP 999</h1>
+                        <p class="dashboard-text-2nd">Daily Income</p>
+                    </div>
+                    <img src="./assets/img/income-icon.png" alt="" class="dashboard-icons">
                 </div>
-              </div>
+                <div class="total-income">
+                    <div class="daily-icon-stats">
+                        <h1 class="dashboard-amount-2nd">PHP 999</h1>
+                        <p class="dashboard-text-2nd">Total Income</p>
+                    </div>
+                    <img src="./assets/img/income-icon.png" alt="" class="dashboard-icons">
+                </div>
+            </div>
+            
+            <!-- dashboard items -->
+
+            <div class="dashboard-items">
+                <div class="dashboard-items-container">
+                    <h1 class="dashboard-items-title">Items</h1>
+                </div>
+                <div class="dashboard-product-container">
+                    <div class="dashboard-product-1">
+                        <div class="dashboard-products-img-container">
+                            <img src="./assets/img/product-1.png" alt="" class="dashboard-products-img">
+                        </div>
+                        <div class="dashboard-product-info-container">
+                            <span class="product-name">Carrot Cupcake</span>
+                            <p class="product-sold">Products Sold: <span class="product-sold-quantity">N/A</span></p>
+                            <p class="number-of-stocks">Number of Stocks: <span class="number-of-stocks-quantity">N/A</span></p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-product-2">
+                        <div class="dashboard-products-img-container">
+                            <img src="./assets/img/product-2.png" alt="" class="dashboard-products-img">
+                        </div>
+                        <div class="dashboard-product-info-container">
+                            <span class="product-name">Crinkles</span>
+                            <p class="product-sold">Products Sold: <span class="product-sold-quantity">N/A</span></p>
+                            <p class="number-of-stocks">Number of Stocks: <span class="number-of-stocks-quantity">N/A</span></p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-product-3">
+                        <div class="dashboard-products-img-container">
+                            <img src="./assets/img/product-3.png" alt="" class="dashboard-products-img">
+                        </div>
+                        <div class="dashboard-product-info-container">
+                            <span class="product-name">Blueberry Muffin</span>
+                            <p class="product-sold">Products Sold: <span class="product-sold-quantity">N/A</span></p>
+                            <p class="number-of-stocks">Number of Stocks: <span class="number-of-stocks-quantity">N/A</span></p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-product-4">
+                        <div class="dashboard-products-img-container">
+                            <img src="./assets/img/product-4.png" alt="" class="dashboard-products-img">
+                        </div>
+                        <div class="dashboard-product-info-container">
+                            <span class="product-name">Tofu Dumplings</span>
+                            <p class="product-sold">Products Sold: <span class="product-sold-quantity">N/A</span></p>
+                            <p class="number-of-stocks">Number of Stocks: <span class="number-of-stocks-quantity">N/A</span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="feedback">
-          <div class="feedback-text">
-            Check out <span>SUGAR X SALT </span><span>MANILA'S</span> glowing reviews and find<br>out for yourself the deliciousness and quality we offer.
-          </div>
-          <div class="feedback-showcase-container">
-            <div class="feedback-1">
-              <p class="feedback-review">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse neque odit, obcaecati eum veniam! Sed, labore. Id nobis unde minima tenetur adipisci, magni quis esse voluptates deleniti sequi temporibus."</p>
-              <span class="feedback-name">Marc Lowel Castillo</span>
+        <section class="orders-page" id="section-2">
+            <div class="section-title">
+                <h1 class="section-title-text">Orders</h1>
             </div>
-            <div class="feedback-2">
-              <p class="feedback-review">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique in voluptatum corrupti ut, rerum accusantium distinctio reprehenderit error optio, neque eos beatae reiciendis deleniti ea veritatis odit at. Fugit, nostrum?"</p>
-              <span class="feedback-name">John Joseph Cruz</span>
+            
+            <!-- orders stats -->
+
+            <div class="orders-total-stats">
+                <div class="new-orders">
+                    <h1 class="orders-amount">999</h1>
+                    <p class="orders-text">New Orders</p>
+                </div>
+
+                <div class="pending-orders">
+                    <h1 class="orders-amount-2">999</h1>
+                    <p class="orders-text-2">Pending Orders</p>
+                </div>
+
+                <div class="delivered-orders">
+                    <h1 class="orders-amount">999</h1>
+                    <p class="orders-text">Delivered Orders</p>
+                </div>
             </div>
-            <div class="feedback-3">
-              <p class="feedback-review">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque numquam qui dolor pariatur quisquam totam harum iste rem, sapiente quae obcaecati mollitia blanditiis illo cum aperiam quis libero!"</p>
-              <span class="feedback-name">Lyxander Iskra Datu</span>
+
+            <!-- orders table -->
+
+            <div class="orders-table-container">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Order Date</th>
+                            <th>Product Name</th>
+                            <th>Product Variation</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Number</th>
+                            <th>Address</th>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12345</td>
+                            <td>2023-05-15</td>
+                            <td>Crinkles</td>
+                            <td>Pack of 20</td>
+                            <td>3</td>
+                            <td>150.00</td>
+                            <td>+639171234567</td>
+                            <td>123 Main St, Makati City</td>
+                            <td>56789</td>
+                            <td>User123</td>
+                            <td>Cash on Delivery</td>
+                            <td>New</td>
+                        </tr>
+
+                        <tr>
+                            <td>23456</td>
+                            <td>2023-08-22</td>
+                            <td>Carrot Cupcake</td>
+                            <td>Box of 5</td>
+                            <td>2</td>
+                            <td>180.00</td>
+                            <td>+639285678901</td>
+                            <td>456 Oak St, Quezon City</td>
+                            <td>98765</td>
+                            <td>CakeLover</td>
+                            <td>Gcash</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>34567</td>
+                            <td>2023-11-10</td>
+                            <td>Blueberry Muffin</td>
+                            <td>Box of 8</td>
+                            <td>1</td>
+                            <td>120.00</td>
+                            <td>+639332345678</td>
+                            <td>789 Pine St, Manila</td>
+                            <td>23456</td>
+                            <td>MuffinFan</td>
+                            <td>Cash on Delivery</td>
+                            <td>Delivered</td>
+                        </tr>
+
+                        <tr>
+                            <td>45678</td>
+                            <td>2024-01-05</td>
+                            <td>Tofu Dumplings</td>
+                            <td>Tub</td>
+                            <td>5</td>
+                            <td>200.00</td>
+                            <td>+639417890123</td>
+                            <td>567 Cedar St, Mandaluyong</td>
+                            <td>34567</td>
+                            <td>HealthyEater</td>
+                            <td>Gcash</td>
+                            <td>New</td>
+                        </tr>
+                          
+                        <tr>
+                            <td>56789</td>
+                            <td>2023-09-18</td>
+                            <td>Crinkles</td>
+                            <td>Pack of 10</td>
+                            <td>4</td>
+                            <td>100.00</td>
+                            <td>+639552345678</td>
+                            <td>456 Maple St, Pasig</td>
+                            <td>87654</td>
+                            <td>SweetTooth</td>
+                            <td>Cash on Delivery</td>
+                            <td>Delivered</td>
+                        </tr>
+                          
+                        <tr>
+                            <td>67890</td>
+                            <td>2023-06-30</td>
+                            <td>Carrot Cupcake</td>
+                            <td>Box of 4</td>
+                            <td>2</td>
+                            <td>160.00</td>
+                            <td>+639661234567</td>
+                            <td>789 Birch St, Taguig</td>
+                            <td>76543</td>
+                            <td>BakeryFanatic</td>
+                            <td>Gcash</td>
+                            <td>Pending</td>
+                        </tr>
+                          
+                        <tr>
+                            <td>78901</td>
+                            <td>2023-12-15</td>
+                            <td>Blueberry Muffin</td>
+                            <td>Box of 4</td>
+                            <td>3</td>
+                            <td>135.00</td>
+                            <td>+639778901234</td>
+                            <td>123 Pine St, Marikina</td>
+                            <td>23456</td>
+                            <td>MuffinLover</td>
+                            <td>Cash on Delivery</td>
+                            <td>Delivered</td>
+                        </tr>
+                          
+                        <tr>
+                            <td>89012</td>
+                            <td>2023-07-20</td>
+                            <td>Tofu Dumplings</td>
+                            <td>Tub</td>
+                            <td>1</td>
+                            <td>40.00</td>
+                            <td>+639991234567</td>
+                            <td>567 Pine St, Caloocan</td>
+                            <td>54321</td>
+                            <td>HealthNut</td>
+                            <td>Cash on Delivery</td>
+                            <td>Delivered</td>
+                        </tr>
+                          
+                        <tr>
+                            <td>90123</td>
+                            <td>2023-03-05</td>
+                            <td>Crinkles</td>
+                            <td>Pack of 4</td>
+                            <td>5</td>
+                            <td>125.00</td>
+                            <td>+639112345678</td>
+                            <td>789 Oak St, Pasay</td>
+                            <td>43210</td>
+                            <td>SugarRush</td>
+                            <td>Gcash</td>
+                            <td>Delivered</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-          </div>
-          <div class="leave-a-review-container">
-            <span class="review-button">LEAVE A REVIEW</span>
-          </div>
         </section>
 
+        <section class="inventory-page">
+
+        </section>
     </main>
-
-    <footer>
-      <div class="footer-content-container">
-        <div class="first-column">
-          <img class="sugarxsalt-logo" src="./assets/img/logo-2.png" alt="">
-          <div class="socials-logo-container">
-            <a href="https://www.facebook.com/sugarxsalt.mnl" target="_blank"><img class="socials-logo" src="./assets/img/facebook.png" alt=""></a>
-            <a href="https://www.instagram.com/sugarxsalt.mnl/"><img class="socials-logo" src="./assets/img/instagram.png" alt=""></a>
-            <a href="."><img class="socials-logo" src="./assets/img/twitter.png" alt=""></a>
-          </div>
-        </div>
-        <div class="second-column">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum distinctio fugit eaque vitae quidem! Maxime accusamus cum dolores eum tempora voluptate inventore, laudantium itaque exercitationem atque cumque. Voluptate, atque exercitationem.
-        </div>
-        <div class="third-column">
-          <div class="anchor-links">
-            <div class="anchor-links-left">
-              <a href=".">About Us</a>
-              <a href=".">My Account</a>
-            </div>
-            <div class="anchor-links-center">
-              <a href=".">Privacy Policy</a>
-              <a href=".">Contact Us</a>
-            </div>
-            <div class="anchor-links-right">
-              <a href=".">Track Order</a>
-              <a href=".">Terms & Conditions</a>
-            </div>
-          </div>
-          <img class="haxor-logo" src="./assets/img/haxor.png" alt="dev-team">
-        </div>
-      </div>
-    </footer>
-    <script type="module" src="index.js"></script>
-  </body>
+</body>
 </html>
