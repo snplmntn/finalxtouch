@@ -179,6 +179,7 @@ function login() {
       // Login successful
       const user = auth.currentUser;
       if (user) {
+        // localStorage.setItem('userID', )
           window.location.href = "index.html";
       }
     })

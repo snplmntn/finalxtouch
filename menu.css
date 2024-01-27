@@ -1,0 +1,595 @@
+:root {
+    --color-main: #db8770;
+  }
+  
+  @font-face {
+    font-family: "Bobby Jones";
+    src: url("./assets/bobby-jones-regular.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Bobby Jones Condensed";
+    src: url("./assets/bobby-jones-condensed.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Bobby Jones Soft";
+    src: url("./assets/bobby-jones-soft-regular.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "BlueBerry";
+    src: url("./assets/Blueberry\ .ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Alice";
+    src: url("./assets/Alice-Regular.ttf") format("truetype");
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right,#FFF1F1, #EA8D8D, #DB8770);
+    background-size: cover;
+    font-family: "Bobby Jones Condensed", sans-serif;
+    font-weight: 300;
+    color: #444;
+  }
+  
+  /* GENERAL ELEMENTS */
+  .section {
+    padding: 15rem 3rem;
+    border-top: 1px solid #ddd;
+    transition: transform 1s, opacity 1s;
+  }
+  
+  /* TITLE */
+  .title {
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .title-name {
+    font-family: "BlueBerry";
+    font-size: 3.25rem;
+    font-weight: 400;
+    color: var(--color-main);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    letter-spacing: 0.3rem;
+  }
+  
+  .title-place {
+    font-size: 2.8rem;
+    color: #637072;
+  }
+  
+  .title-message {
+    font-size: 1.5rem;
+    color: #b83c3c;
+  }
+  
+  /* NAV */
+  .nav-section {
+    background-color: var(--color-main);
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .nav-buttons {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+  }
+  
+  .nav-button {
+    cursor: pointer;
+    color: #000;
+    margin: 0 2rem;
+  }
+
+  .nav-left {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-search {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: url("./assets/search\ interface\ symbol.png");
+    background-size: cover;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .nav-right > * {
+    margin-left: 2rem;
+  }
+
+  .nav-cart {
+    cursor: pointer;
+    height: 2.4rem;
+    width: 2.4rem;
+    background: url("assets/shopping-bag.png");
+    background-size: cover;
+  }
+  
+  .nav-account {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: url("assets/profile-user.png");
+    background-size: cover;
+  }
+
+
+.nav-button:hover {
+  color:  #efefef;
+  transition: 0.3s;
+}
+
+  /* UPPER-PAGE */
+ .true-logo{
+  height: 16rem;
+  margin-bottom:-16rem;
+  margin-left:17rem;
+ }
+
+ .main-title{
+  font-family: "BlueBerry";
+  font-size: 5rem;
+  font-weight: 400;
+  color:#000;
+  margin-top: 3rem ;
+  margin-left: 47rem;
+ }
+
+.product-name {
+  font-family: "Bobby Jones Condensed";
+  font-size: 2rem;
+  font-weight: 200;
+  color:#000;
+  margin-top: 0.25rem;
+  margin-left: 47rem;
+}
+
+.product-price {
+  font-family: "Alice";
+  font-size: 2rem;
+  font-weight: 500;
+  color:#000;
+  margin-top: 0.25rem;
+  margin-left: 47rem;
+}
+
+.product-info {
+  font-family: "Bobby Jones Condensed";
+  font-size: 4rem;
+  font-weight: 400;
+  color:#000;
+  margin-bottom: 1rem;
+  margin-left: 12rem;
+}
+
+.product-sub {
+  font-family: "Alice";
+  font-size: 1.50rem;
+  font-weight: 400;
+  color:#000;
+  margin-left: 12rem;
+}
+
+.button-1{
+  font-family: "Bobby Jones";
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 15rem;
+  margin-left: 12rem;
+  padding: .5rem 2.5rem;
+  border: 1px solid;
+  border-bottom: 5px solid;
+  border-color: #990202;
+  border-radius: 10px;
+  background-color:#B83C3C;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.button-1:hover{
+  color: #B83C3C;
+  background-color:#FFF1F1 ;
+}
+
+.crinkles{
+  position:relative;
+  display: flex;
+  justify-self: flex-end;
+  height: 45rem;
+  margin-left: 60rem;
+  margin-top: -50rem;  
+}
+
+/*MENU-PAGE*/
+
+
+
+
+  /* FOOTER */
+footer {
+  border-top: 4px solid #000;
+  background-color: #FFF1F1;
+  height: 40vh;
+  max-height: 40vh;
+  min-height: 40vh;
+}
+
+footer > * {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+  color: #000;
+}
+
+.footer-content-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  font-family: "Bobby Jones Condensed";
+  color: #000;
+}
+
+.sugarxsalt-logo {
+  height: 15rem;
+  width: auto;
+}
+
+.socials-logo-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.socials-logo {
+  height: 2rem;
+  width: auto;
+  margin: 0.5rem;
+}
+
+.second-column {
+  display: flex;
+  flex: 1;
+  font-size: 1rem;
+  font-family: "Alice";
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.third-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+}
+
+.anchor-links {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bobby Jones";
+  color: #000;
+}
+
+.anchor-links-left, .anchor-links-center, .anchor-links-right {
+  width: auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}  
+
+.anchor-links-left a:nth-child(1), .anchor-links-center a:nth-child(1), .anchor-links-right a:nth-child(1) {
+  margin-bottom: 1.5rem;
+}
+
+.anchor-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #000;
+}
+
+.haxor-logo {
+  width: 10rem;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.link:hover{
+  color: #DB8770;
+  transition: 0.3s;
+}
+
+.products{
+  width: 150px;
+  height: 200px;
+}
+
+.menu-name{
+  font-family: BlueBerry;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.top-items {
+  border-top: 4px solid #000;
+  background-color: rgb(255,224,224);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10rem;     
+}
+
+.top-items-header {
+  font-family: BlueBerry;
+  font-size: 3rem;
+  color: #000000;
+  margin-top: 5rem;
+}
+
+.product-showcase-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-showcase-container > div {
+  width: 22rem;
+  height: 25rem;
+  background-color: rgb(218,134,112);
+  border: 2px solid;
+  border-radius: 3rem;
+  border-color: #990202;
+  margin-bottom: 10rem;
+}
+.product-description {
+  text-align: center;
+  font-family: "Bobby Jones Condensed";
+  font-size: 16px;
+  color:#000000;
+}
+/* carrot cupcake */
+
+.product-1 {
+  height: 23rem;
+  width: auto;
+  position: relative;
+  top: -10rem;
+}
+
+.product-1-contents-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  top: -13rem;
+}
+
+
+.product-1-button {
+  font-family: "Bobby Jones";
+  font-size: 1.5rem;
+  padding: .5rem 2.5rem;
+  border: 1px solid;
+  border-bottom: 5px solid;
+  border-color: #990202;
+  border-radius: 10px;
+  background-color:#B83C3C;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.product-1-button:hover{
+  color: #B83C3C;
+  background-color:#FFF1F1 ;
+}
+
+/* crinkles */
+
+.product-2 {
+  height: 23rem;
+  width: auto;
+  position: relative;
+  top: -10rem;
+}
+
+.product-2-contents-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  top: -13rem;
+}
+
+.product-2-button {
+  font-family: "Bobby Jones";
+  font-size: 1.5rem;
+  padding: .5rem 2.5rem;
+  border: 1px solid;
+  border-bottom: 5px solid;
+  border-color: #990202;
+  border-radius: 10px;
+  background-color:#B83C3C;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+.product-2-button:hover{
+  color: #B83C3C;
+  background-color:#FFF1F1 ;
+}
+/* blueberry muffin */
+
+.product-3 {
+  height: 23rem;
+  width: auto;
+  position: relative;
+  top: -10rem;
+}
+
+.product-3-contents-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  top: -13rem;
+}
+
+.product-3-button {
+  font-family: "Bobby Jones";
+  font-size: 1.5rem;
+  padding: .5rem 2.5rem;
+  border: 1px solid;
+  border-bottom: 5px solid;
+  border-color: #990202;
+  border-radius: 10px;
+  background-color:#B83C3C;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.product-3-button:hover{
+  color: #B83C3C;
+  background-color:#FFF1F1 ;
+}
+
+/* tofu dumplings */
+
+.product-4{
+  height: 23rem;
+  width: auto;
+  position: relative;
+  top: -10rem;
+}
+
+.product-4-contents-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  top: -13rem;
+}
+
+.product-4-button {
+  font-family: "Bobby Jones";
+  font-size: 1.5rem;
+  padding: .5rem 2.5rem;
+  border: 1px solid;
+  border-bottom: 5px solid;
+  border-color: #990202;
+  border-radius: 10px;
+  background-color:#B83C3C;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+.product-4-button:hover{
+  color: #B83C3C;
+  background-color:#FFF1F1 ;
+}
+
+/* prices */
+
+.price-1{
+  font-family: "Bobby Jones Condensed";
+  font-size: 2.5rem;
+  font-weight: 400;
+  color:#000;
+}
+
+.price-2{
+  font-family: "Bobby Jones Condensed";
+  font-size: 2.5rem;
+  font-weight: 400;
+  color:#000;
+}
+
+.price-3{
+  font-family: "Bobby Jones Condensed";
+  font-size: 2.5rem;
+  font-weight: 400;
+  color:#000;
+}
+
+.price-4{
+  font-family: "Bobby Jones Condensed";
+  font-size: 2.5rem;
+  font-weight: 400;
+  color:#000;
+}
