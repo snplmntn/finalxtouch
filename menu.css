@@ -104,6 +104,7 @@
     cursor: pointer;
     color: #000;
     margin: 0 2rem;
+    text-decoration: none;
   }
 
   .nav-left {
@@ -194,6 +195,7 @@
   font-size: 4rem;
   font-weight: 400;
   color:#000;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   margin-left: 12rem;
 }
