@@ -21,7 +21,7 @@ import {
 
 let load = false;
 
-const apiUrl = 'https://fxt-api.dosshs.online';
+const apiUrl = 'https://fxt-api.dosshs.online/api';
 // const apiUrl = 'http://localhost:1234/api';
 
 //Checks User's Auth

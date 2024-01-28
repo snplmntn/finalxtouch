@@ -19,7 +19,7 @@ import {
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-const apiUrl = 'https://fxt-api.dosshs.online';
+const apiUrl = 'https://fxt-api.dosshs.online/api';
 // const apiUrl = 'http://localhost:1234/api';
 
 let load = false;
