@@ -339,7 +339,7 @@ body {
 
   /* faq */
   .faq-container {
-    border-bottom: 4px solid #000;
+    box-shadow: inset 0 -8px 6px -6px rgba(0, 0, 0, 0.5);
   }
 
   .platter {
@@ -356,6 +356,8 @@ body {
     background-size: cover;
     background-position: center; 
     background-image: url('./assets/img/platter.png');
+    position: relative;
+    z-index: 1;
   }
 
   .faq {
@@ -394,6 +396,7 @@ body {
     height: 40vh;
     max-height: 40vh;
     min-height: 40vh;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 
   footer > * {
@@ -414,11 +417,10 @@ body {
     flex-direction: column;
     align-items: center;
     flex: 1;
-    font-family: "Bobby Jones Condensed";
   }
 
   .sugarxsalt-logo {
-    height: 15rem;
+    height: 10rem;
     width: auto;
   }
 
@@ -436,10 +438,9 @@ body {
 
   .second-column {
     display: flex;
+    text-align: center;
     flex: 1;
     font-size: 1rem;
-    font-family: "Alice";
-    font-size: 1.5rem;
   }
 
   .third-column {
@@ -453,7 +454,6 @@ body {
   .anchor-links {
     display: flex;
     justify-content: space-between;
-    font-family: "Bobby Jones";
   }
 
   .anchor-links-left, .anchor-links-center, .anchor-links-right {

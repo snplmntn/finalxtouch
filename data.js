@@ -20,6 +20,7 @@ import {
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const apiUrl = 'https://fxt-api.dosshs.online';
+// const apiUrl = 'http://localhost:1234/api';
 
 let load = false;
 
@@ -58,7 +59,7 @@ const signUp_button = document.querySelector(".signUpBtn");
 const logIn_button = document.querySelector(".signInBtn");
 
 // Signup function
-function signup() {
+async function signup () {
   const username = document.getElementById("signup-username").value;
   const name = document.getElementById("signup-name").value;
   const email = document.getElementById("signup-email").value;
@@ -66,9 +67,6 @@ function signup() {
   const confirmPassword = document.getElementById(
     "signup-confirm-password"
   ).value;
-//   const termsCondition = document.querySelector(
-//     "#terms-and-conditions-checkbox"
-//   );
 
   // Validate input fields
   if (
@@ -95,7 +93,7 @@ function signup() {
   signUp_button.disabled = true;
   signUp_button.innerText = "Signing you up..."
   createUserWithEmailAndPassword(auth, email, password)
-    .then(function (userCredential) {
+    .then(async function (userCredential) {
     const user = auth.currentUser;
 
       // Create User data
@@ -108,20 +106,26 @@ function signup() {
 
 
       try {
-        fetch(`${apiUrl}/auth/signup`, {
+        const response = await fetch(`${apiUrl}/auth/signup`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: user_data,
-        }).then(response => console.log(response))
-        .then(() => {
-            if (user) {
-                alert("Signup successful!");
-                window.location.href = "index.html"
-            }
-            
-        })
+        });
+
+        // Check if the response status is OK (200-299)
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+         }
+
+        // Parse the JSON data from the response
+        const data = await response.json();
+        localStorage.setItem('userID', data.results.insertId);
+        if(user) {
+          alert("Signup successful!");
+          window.location.href = "index.html"
+        }
       } catch(err) {
         signUp_button.disabled = false;
         signUp_button.innerText = "SIGN UP!"
@@ -141,7 +145,7 @@ function signup() {
 }
 
 // Login function
-function login() {
+async function login() {
   const email = document.getElementById("login-email").value;
   const password = document.getElementById("login-password").value;
 
@@ -155,33 +159,41 @@ function login() {
   }
 
   signInWithEmailAndPassword(auth, email, password)
-    .then(function () {
+    .then(async function () {
         const user_data = JSON.stringify({
             email: email,
             password: password 
          });
 
         try {
-            fetch(`${apiUrl}/auth/login`, {
+            const response = await fetch(`${apiUrl}/auth/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: user_data,
-            }).then(response => console.log(response))
-            .then(() => {
-                alert("Login successful!");
             })
+
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+             }
+             
+            const data = await response.json();
+
+            // Login successful
+            const user = auth.currentUser;
+            if (user) {
+            localStorage.setItem('userID', data.user.userID);
+              window.location.href = "index.html";
+            }
+
+            alert("Login successful!");
+
           } catch(err) {
             console.error(err)
             alert("An Error Occured. Please try it again in a few minutes. If problem still occurs contact the developer.")
           }
-      // Login successful
-      const user = auth.currentUser;
-      if (user) {
-        // localStorage.setItem('userID', )
-          window.location.href = "index.html";
-      }
+
     })
     .catch(function (error) {
       // Handle errors

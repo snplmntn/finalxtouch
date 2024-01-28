@@ -259,7 +259,7 @@
   /* bakers section */
 
   .bakers-section {
-    height: 90vh;
+    height: 100vh;
     background-color: #fdf2f0;
     box-shadow: inset 0 8px 6px -6px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -304,6 +304,11 @@
     margin-left: 2rem;
     font-size: 2rem;
     text-align: center;
+  }
+
+  .baker-description span {
+    color:#B83C3C;
+    font-weight: bold;
   }
 
   /* development team */

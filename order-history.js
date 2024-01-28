@@ -3,9 +3,18 @@
 const apiUrl = 'https://fxt-api.dosshs.online/api';
 // const apiUrl = 'http://localhost:1234/api';
 
-const userID = 1;
+
+// date options 
+const options = { 
+  year: 'numeric', 
+  month: 'numeric', 
+  day: 'numeric', 
+  hour: 'numeric', 
+  minute: 'numeric', 
+};
 
 const fetchOrder =  async () => {
+  const userID = localStorage.getItem('userID');
   try {
     const response = await fetch(`${apiUrl}/order/o?userID=${userID}`, {
       method: 'GET',
@@ -14,13 +23,18 @@ const fetchOrder =  async () => {
       },
     });
 
+    if(response.status === 404) return alert("No existing order found")
+    
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
+
+
     
     const orderTbody = document.querySelector('.order-history-content');
     const data = await response.json();
-    data.results.reverse().forEach(order => {
+    data.results.forEach(order => {
+
       const row = document.createElement('tr');
 
       const columnsToDisplay = ['orderID', 'dateOrdered', 'name', 'quantity', 'totalPrice', 'status', 'paymentMethod'];
@@ -42,6 +56,12 @@ const fetchOrder =  async () => {
           } else if (order[column] === 1) {
             cell.textContent = 'GCASH';
           } 
+        } else if(column === 'dateOrdered') {
+            const originalDateString = order[column];
+            const originalDate = new Date(originalDateString);
+            const formatter = new Intl.DateTimeFormat('en-US', options);
+            const parts = formatter.formatToParts(originalDate);
+            cell.textContent = parts.map(part => part.value).join('');
         } else cell.textContent = order[column];
 
         row.appendChild(cell);

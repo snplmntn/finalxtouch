@@ -57,19 +57,19 @@ const logout_button = document.querySelector(".signOutBtn");
 
 
 logout_button.addEventListener("click", function () {
-    // Calls the signOut() method to log out the user
-    // localStorage.removeItem("userName");
-    // localStorage.removeItem("userUID");
-  
-    auth
-      .signOut()
-      .then(() => {
-        window.location.href = "login.html";
-      })
-      .catch((error) => {
-        // An error happened.
-      });
-  });
+  // Calls the signOut() method to log out the user
+  localStorage.removeItem("userID");
+
+  auth
+    .signOut()
+    .then(() => {
+      window.location.href = "login.html";
+    })
+    .catch((error) => {
+      // An error happened.
+      console.error(error);
+    });
+});
 
 const buyNow1 = document.querySelector(".product-1-button")
 const buyNow2 = document.querySelector(".product-2-button")

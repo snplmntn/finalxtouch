@@ -19,14 +19,14 @@
             <p class="nav-logout signOutBtn"></p>
         </section>
         <section class="nav-buttons">
-          <a href="index.html" class="nav-button">HOME</span>
-          <a href="menu.html" class="nav-button">MENU</span>
-          <a href="about-us.html" class="nav-button">ABOUT</span>
-          <a href="contact.html" class="nav-button">CONTACT</a>
+            <a href="index.html" class="nav-button">HOME</a>
+            <a href="menu.html" class="nav-button">MENU</a>
+            <a href="about-us.html" class="nav-button">ABOUT</a>
+            <a href="contact.html" class="nav-button">CONTACT</a>
         </section>
         <section class="nav-right">
-            <p class="nav-cart"></p>
-            <p class="nav-account"></p>
+            <a class="nav-cart"></a>
+            <a class="nav-account" href="order.html"></a>
         </section>
       </nav>
     </header>
@@ -36,8 +36,7 @@
         <div class="product-header">
           <div class="product-header-img"></div>
           <p class="product-header-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut .
+            Have a go at our products, see which fits your palate and your preference! Sweet, Savory, or Salty, we got it for you!
           </p>
         </div>
         <div class="products">
@@ -123,19 +122,19 @@
             <div class="cart-product">
               <div class="cart-product-image"></div>
               <div class="cart-product-quantity">
-                <div class="number">2</div>
+                <div class="number"></div>
               </div>
               <div class="product-size">
-                <p>Tofu Dumplings</p>
-                <p>Tub of 12</p>
+                <p id="product-name"></p>
+                <p id="product-size"></p>
               </div>
-              <p class="cart-price">PHP 320</p>
+              <p class="cart-price" id="product-price"></p>
             </div>
           </div>
           <div class="cart-total-price">
             <div class="price">
               <p>FINAL</p>
-              <p>PHP 320</p>
+              <p class="cart-price" id="product-total-price"></p>
             </div>
             <!-- <div class="price">
               <p>DISCOUNT</p>
@@ -147,7 +146,7 @@
             </div>
             <div class="price">
               <p class="big-p">TOTAL</p>
-              <p class="big-p">PHP 385</p>
+              <p class="big-p" id="grand-total-price"></p>
             </div>
           </div>
         </div>
@@ -155,6 +154,6 @@
       </div>
     </div>
     <script type="module" src="product-page.js"></script>
-    <script type="module" src="order.js"></script>
+    <script type="module" src="cart.js"></script>
   </body>
 </html>

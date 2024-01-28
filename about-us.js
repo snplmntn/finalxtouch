@@ -66,5 +66,6 @@ logout_button.addEventListener("click", function () {
       })
       .catch((error) => {
         // An error happened.
+        console.error(error);
       });
   });

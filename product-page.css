@@ -385,10 +385,22 @@ h6 {
 }
 
 .cart-product-image {
-  background: url("./assets/product-4.png");
   background-size: cover;
   width: 3rem;
   height: 3rem;
+}
+
+.payment {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.payment.selected {
+  background-color: #ca1610;
+  color: #fff;
 }
 
 .price {
