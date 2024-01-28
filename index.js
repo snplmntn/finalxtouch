@@ -131,8 +131,6 @@ document.querySelector('#submit-btn').addEventListener("click", async () => {
     feedback: feedback 
  });
 
- console.log(review_data)
-
 
   try {
     const response = await fetch(`${apiUrl}/review`, {
