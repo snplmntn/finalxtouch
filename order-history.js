@@ -1,7 +1,7 @@
 "use strict";
 
-// const apiUrl = 'https://fxt-api.dosshs.online/api';
-const apiUrl = 'http://localhost:1234/api';
+const apiUrl = 'https://fxt-api.dosshs.online/api';
+// const apiUrl = 'http://localhost:1234/api';
 
 const userID = 1;
 
